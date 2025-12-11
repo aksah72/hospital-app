@@ -1,0 +1,17 @@
+# Node
+node_modules/
+
+# Terraform
+.terraform/
+infra/.terraform/
+terraform.tfstate
+terraform.tfstate.*
+.crash.log
+*.tfvars
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db

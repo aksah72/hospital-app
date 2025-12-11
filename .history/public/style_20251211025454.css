@@ -1,0 +1,93 @@
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+  }
+  
+  /* AUTH SCREENS */
+  .auth-bg{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:linear-gradient(120deg,#2c7be5,#6f42c1);
+  }
+  
+  .auth-card{
+    width:350px;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
+    text-align:center;
+  }
+  
+  .auth-card input{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+  }
+  
+  .auth-card button{
+    width:100%;
+    padding:12px;
+    background:#2c7be5;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+  }
+  
+  /* HEADER */
+  .topbar{
+    background:#2c7be5;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    color:#fff;
+  }
+  
+  .topbar nav a{
+    color:#fff;
+    margin-left:15px;
+    text-decoration:none;
+  }
+  
+  /* DASHBOARD */
+  .container{
+    padding:30px;
+  }
+  
+  .cards{
+    display:flex;
+    gap:20px;
+  }
+  
+  .card{
+    padding:20px;
+    background:#f1f1f1;
+    border-radius:10px;
+    width:200px;
+    text-align:center;
+    font-size:18px;
+    text-decoration:none;
+    color:#333;
+    box-shadow:0 5px 10px rgba(0,0,0,.1);
+  }
+  
+  /* TABLE */
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+  }
+  
+  table, th, td{
+    border:1px solid #ccc;
+  }
+  
+  th, td{
+    padding:10px;
+  }
+  

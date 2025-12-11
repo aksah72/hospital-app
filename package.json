@@ -1,11 +1,21 @@
 {
   "name": "hospital-appointment",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "app.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.4",
+    "dotenv": "^16.6.1",
+    "ejs": "^3.1.10",
+    "express": "^4.22.1",
+    "express-session": "^1.18.2",
+    "mongoose": "^7.8.8"
+  },
+  "description": "",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aksah72/hospital-management.git"
@@ -13,17 +23,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/aksah72/hospital-management/issues"
   },
-  "homepage": "https://github.com/aksah72/hospital-management#readme",
-  "dependencies": {
-    "bcryptjs": "^3.0.3",
-    "dotenv": "^17.2.3",
-    "ejs": "^3.1.10",
-    "express": "^5.2.1",
-    "express-session": "^1.18.2",
-    "mongoose": "^9.0.1"
-  }
+  "homepage": "https://github.com/aksah72/hospital-management#readme"
 }

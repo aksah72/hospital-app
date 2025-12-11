@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hospital Login</title>
+<style>
+body{
+  margin:0;
+  font-family: 'Segoe UI',sans-serif;
+  background: linear-gradient(120deg,#2c7be5,#6f42c1);
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.card{
+  background:#fff;
+  width:360px;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 20px 40px rgba(0,0,0,.2);
+  text-align:center;
+}
+.card img{
+  width:90px;
+  margin-bottom:10px;
+}
+.card h2{
+  margin:10px 0 20px;
+  color:#2c7be5;
+}
+input{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+button{
+  width:100%;
+  padding:12px;
+  background:#2c7be5;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+button:hover{ background:#1a68d1; }
+.footer{
+  margin-top:15px;
+  font-size:14px;
+}
+.footer a{
+  color:#6f42c1;
+  text-decoration:none;
+  font-weight:600;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <img src="https://img.icons8.com/color/96/hospital.png">
+  <h2>Hospital Management</h2>
+
+  <form method="post" action="/login">
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button>Login</button>
+  </form>
+
+  <div class="footer">
+    New user? <a href="/register">Register</a>
+  </div>
+</div>
+
+</body>
+</html>

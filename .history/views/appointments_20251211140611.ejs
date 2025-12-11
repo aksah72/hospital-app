@@ -1,0 +1,35 @@
+<%- include('layout', { title: title, body: `
+    <h2>All Booked Appointments</h2>
+  
+    ${appointments.length === 0 ? `
+      <p>No appointments yet. <a href="/">Book one now</a>.</p>
+    ` : `
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Patient</th>
+            <th>Email</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Booked At</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${appointments.map(a => `
+            <tr>
+              <td>${a.id}</td>
+              <td>${a.name}</td>
+              <td>${a.email}</td>
+              <td>${a.doctor}</td>
+              <td>${a.date}</td>
+              <td>${a.time}</td>
+              <td>${a.createdAt}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    `}
+  ` }) %>
+  

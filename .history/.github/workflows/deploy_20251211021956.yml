@@ -1,0 +1,27 @@
+name: CI-CD
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+
+    - run: |
+        docker build -t aksah22/hospital-app .
+        docker push aksah22/hospital-app
+
+    - uses: appleboy/ssh-action@v1
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USER }}
+        key: ${{ secrets.EC2_KEY }}
+        script: |
+          docker pull aksah22/hospital-app
+          docker rm -f hospital-app || true
+          docker run -d -p 80:3000 --name hospital-app aksah22/hospital-app
